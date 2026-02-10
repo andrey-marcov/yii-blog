@@ -86,4 +86,18 @@ class Post extends \yii\db\ActiveRecord
         return $this->hasMany(Comment::class, ['post_id' => 'id']);
     }
 
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+            if ($insert) {
+                $this->created_at = date('Y-m-d H:i:s');
+                $this->updated_at = date('Y-m-d H:i:s');
+            } else {
+                $this->updated_at = date('Y-m-d H:i:s');
+            }
+            return true;
+        }
+        return false;
+    }
+
 }
