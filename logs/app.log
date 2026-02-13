@@ -1,0 +1,1047 @@
+2026-02-13 10:16:59 [::1][-][b8b82plt8292deeme662hlmtdu][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Connection::dsn cannot be empty. in Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\Connection.php:627
+Stack trace:
+#0 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\Connection.php(1074): yii\db\Connection->open()
+#1 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\Connection.php(1061): yii\db\Connection->getMasterPdo()
+#2 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\Connection.php(1023): yii\db\Connection->getSlavePdo(true)
+#3 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\Connection.php(871): yii\db\Connection->getDriverName()
+#4 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Connection->getSchema()
+#5 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(464): yii\db\ActiveRecord::getTableSchema()
+#6 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(180): yii\db\ActiveRecord::primaryKey()
+#7 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(109): yii\db\ActiveRecord::findByCondition(5)
+#8 Z:\xampp\htdocs\blog\models\UserIdentity.php(15): yii\db\BaseActiveRecord::findOne(5)
+#9 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(731): app\models\UserIdentity::findIdentity(5)
+#10 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(206): yii\web\User->renewAuthStatus()
+#11 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(384): yii\web\User->getIdentity()
+#12 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Component.php(144): yii\web\User->getIsGuest()
+#13 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#14 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#15 [internal function]: yii\base\BaseObject->__construct(Array)
+#16 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(440): ReflectionClass->newInstanceArgs(Array)
+#17 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#18 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#19 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#20 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#21 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#22 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(163): yii\base\BaseObject->__construct(Array)
+#23 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#24 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(432): ReflectionClass->newInstanceArgs(Array)
+#25 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#26 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#27 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(444): yii\BaseYii::createObject(Array, Array)
+#28 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#29 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\Application.php(78): yii\base\Application->bootstrap()
+#30 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#31 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#32 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#33 Z:\xampp\htdocs\blog\web\index.php(12): yii\base\Application->__construct(Array)
+#34 {main}
+2026-02-13 10:16:59 [::1][-][b8b82plt8292deeme662hlmtdu][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'b8b82plt8292deeme662hlmtdu'
+    '_csrf' => '6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KN57Frfa9G3ndSQrdnMFGxh27rFM86zj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+    '__authKey' => 'hICamNGgKZ066e6wmmrr0W9SKXjNnjWG'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'Z:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'Z:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"142\", \"YaBrowser\";v=\"25.12\", \"Not_A Brand\";v=\"99\", \"Yowser\";v=\"2.5\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/blog/web/about/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=b8b82plt8292deeme662hlmtdu; _csrf=6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KN57Frfa9G3ndSQrdnMFGxh27rFM86zj%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk-17\\bin;C:\\Gradle\\gradle-9.0.0\\bin\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;Z:\\Git\\cmd;Z:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\Android\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Android\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'Z:/xampp/htdocs/blog/web/index.php'
+    'REMOTE_PORT' => '60479'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770974219.4466
+    'REQUEST_TIME' => 1770974219
+]
+2026-02-13 10:19:44 [::1][-][b8b82plt8292deeme662hlmtdu][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\caching\FileCache::fileLocking in Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Component.php:226
+Stack trace:
+#0 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(572): yii\base\Component->__set('fileLocking', true)
+#1 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(110): yii\BaseYii::configure(Object(yii\caching\FileCache), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(440): ReflectionClass->newInstanceArgs(Array)
+#4 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\caching\\Fil...', Array, Array)
+#5 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\caching\\Fil...', Array, Array)
+#6 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\ServiceLocator.php(140): yii\BaseYii::createObject(Array)
+#7 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(780): yii\di\ServiceLocator->get('cache', false)
+#8 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\Schema.php(753): yii\base\Module->get('cache', false)
+#9 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\Schema.php(199): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#10 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(440): yii\db\Schema->getTableSchema('{{%user}}')
+#11 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(464): yii\db\ActiveRecord::getTableSchema()
+#12 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(180): yii\db\ActiveRecord::primaryKey()
+#13 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(109): yii\db\ActiveRecord::findByCondition(5)
+#14 Z:\xampp\htdocs\blog\models\UserIdentity.php(15): yii\db\BaseActiveRecord::findOne(5)
+#15 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(731): app\models\UserIdentity::findIdentity(5)
+#16 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(206): yii\web\User->renewAuthStatus()
+#17 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(384): yii\web\User->getIdentity()
+#18 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Component.php(144): yii\web\User->getIsGuest()
+#19 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#20 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#21 [internal function]: yii\base\BaseObject->__construct(Array)
+#22 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(440): ReflectionClass->newInstanceArgs(Array)
+#23 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#24 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#25 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#26 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#27 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#28 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(163): yii\base\BaseObject->__construct(Array)
+#29 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#30 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(432): ReflectionClass->newInstanceArgs(Array)
+#31 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#32 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#33 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(444): yii\BaseYii::createObject(Array, Array)
+#34 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#35 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\Application.php(78): yii\base\Application->bootstrap()
+#36 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#37 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#38 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#39 Z:\xampp\htdocs\blog\web\index.php(12): yii\base\Application->__construct(Array)
+#40 {main}
+2026-02-13 10:19:43 [::1][-][b8b82plt8292deeme662hlmtdu][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'b8b82plt8292deeme662hlmtdu'
+    '_csrf' => '6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KN57Frfa9G3ndSQrdnMFGxh27rFM86zj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+    '__authKey' => 'hICamNGgKZ066e6wmmrr0W9SKXjNnjWG'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'Z:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'Z:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"142\", \"YaBrowser\";v=\"25.12\", \"Not_A Brand\";v=\"99\", \"Yowser\";v=\"2.5\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/blog/web/about/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=b8b82plt8292deeme662hlmtdu; _csrf=6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KN57Frfa9G3ndSQrdnMFGxh27rFM86zj%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk-17\\bin;C:\\Gradle\\gradle-9.0.0\\bin\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;Z:\\Git\\cmd;Z:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\Android\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Android\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'Z:/xampp/htdocs/blog/web/index.php'
+    'REMOTE_PORT' => '60582'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770974383.9786
+    'REQUEST_TIME' => 1770974383
+]
+2026-02-13 10:19:44 [::1][-][b8b82plt8292deeme662hlmtdu][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\caching\FileCache::fileLocking in Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Component.php:226
+Stack trace:
+#0 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(572): yii\base\Component->__set('fileLocking', true)
+#1 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(110): yii\BaseYii::configure(Object(yii\caching\FileCache), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(440): ReflectionClass->newInstanceArgs(Array)
+#4 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\caching\\Fil...', Array, Array)
+#5 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\caching\\Fil...', Array, Array)
+#6 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\ServiceLocator.php(140): yii\BaseYii::createObject(Array)
+#7 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(780): yii\di\ServiceLocator->get('cache', false)
+#8 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\Schema.php(753): yii\base\Module->get('cache', false)
+#9 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\Schema.php(199): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#10 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(440): yii\db\Schema->getTableSchema('{{%user}}')
+#11 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(464): yii\db\ActiveRecord::getTableSchema()
+#12 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(180): yii\db\ActiveRecord::primaryKey()
+#13 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(109): yii\db\ActiveRecord::findByCondition(5)
+#14 Z:\xampp\htdocs\blog\models\UserIdentity.php(15): yii\db\BaseActiveRecord::findOne(5)
+#15 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(731): app\models\UserIdentity::findIdentity(5)
+#16 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(206): yii\web\User->renewAuthStatus()
+#17 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(384): yii\web\User->getIdentity()
+#18 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Component.php(144): yii\web\User->getIsGuest()
+#19 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#20 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#21 [internal function]: yii\base\BaseObject->__construct(Array)
+#22 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(440): ReflectionClass->newInstanceArgs(Array)
+#23 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#24 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#25 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#26 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#27 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#28 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(163): yii\base\BaseObject->__construct(Array)
+#29 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#30 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(432): ReflectionClass->newInstanceArgs(Array)
+#31 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#32 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#33 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(444): yii\BaseYii::createObject(Array, Array)
+#34 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#35 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\Application.php(78): yii\base\Application->bootstrap()
+#36 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#37 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#38 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#39 Z:\xampp\htdocs\blog\web\index.php(12): yii\base\Application->__construct(Array)
+#40 {main}
+2026-02-13 10:19:44 [::1][-][b8b82plt8292deeme662hlmtdu][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'b8b82plt8292deeme662hlmtdu'
+    '_csrf' => '6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KN57Frfa9G3ndSQrdnMFGxh27rFM86zj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+    '__authKey' => 'hICamNGgKZ066e6wmmrr0W9SKXjNnjWG'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'Z:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'Z:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"142\", \"YaBrowser\";v=\"25.12\", \"Not_A Brand\";v=\"99\", \"Yowser\";v=\"2.5\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/blog/web/about/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=b8b82plt8292deeme662hlmtdu; _csrf=6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KN57Frfa9G3ndSQrdnMFGxh27rFM86zj%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk-17\\bin;C:\\Gradle\\gradle-9.0.0\\bin\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;Z:\\Git\\cmd;Z:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\Android\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Android\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'Z:/xampp/htdocs/blog/web/index.php'
+    'REMOTE_PORT' => '60583'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770974384.7371
+    'REQUEST_TIME' => 1770974384
+]
+2026-02-13 10:25:35 [::1][-][b8b82plt8292deeme662hlmtdu][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php:443
+Stack trace:
+#0 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(464): yii\db\ActiveRecord::getTableSchema()
+#1 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(180): yii\db\ActiveRecord::primaryKey()
+#2 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(109): yii\db\ActiveRecord::findByCondition(5)
+#3 Z:\xampp\htdocs\blog\models\UserIdentity.php(15): yii\db\BaseActiveRecord::findOne(5)
+#4 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(731): app\models\UserIdentity::findIdentity(5)
+#5 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(206): yii\web\User->renewAuthStatus()
+#6 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(384): yii\web\User->getIdentity()
+#7 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Component.php(144): yii\web\User->getIsGuest()
+#8 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#9 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#10 [internal function]: yii\base\BaseObject->__construct(Array)
+#11 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(440): ReflectionClass->newInstanceArgs(Array)
+#12 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#13 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#14 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#15 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#16 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#17 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(163): yii\base\BaseObject->__construct(Array)
+#18 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#19 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(432): ReflectionClass->newInstanceArgs(Array)
+#20 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#21 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#22 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(444): yii\BaseYii::createObject(Array, Array)
+#23 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#24 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\Application.php(78): yii\base\Application->bootstrap()
+#25 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#26 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#27 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#28 Z:\xampp\htdocs\blog\web\index.php(12): yii\base\Application->__construct(Array)
+#29 {main}
+2026-02-13 10:25:35 [::1][-][b8b82plt8292deeme662hlmtdu][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'b8b82plt8292deeme662hlmtdu'
+    '_csrf' => '6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KN57Frfa9G3ndSQrdnMFGxh27rFM86zj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+    '__authKey' => 'hICamNGgKZ066e6wmmrr0W9SKXjNnjWG'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'Z:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'Z:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"142\", \"YaBrowser\";v=\"25.12\", \"Not_A Brand\";v=\"99\", \"Yowser\";v=\"2.5\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/blog/web/about/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=b8b82plt8292deeme662hlmtdu; _csrf=6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KN57Frfa9G3ndSQrdnMFGxh27rFM86zj%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk-17\\bin;C:\\Gradle\\gradle-9.0.0\\bin\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;Z:\\Git\\cmd;Z:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\Android\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Android\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'Z:/xampp/htdocs/blog/web/index.php'
+    'REMOTE_PORT' => '60646'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770974735.0827
+    'REQUEST_TIME' => 1770974735
+]
+2026-02-13 10:25:35 [::1][-][b8b82plt8292deeme662hlmtdu][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php:443
+Stack trace:
+#0 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(464): yii\db\ActiveRecord::getTableSchema()
+#1 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(180): yii\db\ActiveRecord::primaryKey()
+#2 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(109): yii\db\ActiveRecord::findByCondition(5)
+#3 Z:\xampp\htdocs\blog\models\UserIdentity.php(15): yii\db\BaseActiveRecord::findOne(5)
+#4 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(731): app\models\UserIdentity::findIdentity(5)
+#5 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(206): yii\web\User->renewAuthStatus()
+#6 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(384): yii\web\User->getIdentity()
+#7 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Component.php(144): yii\web\User->getIsGuest()
+#8 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#9 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#10 [internal function]: yii\base\BaseObject->__construct(Array)
+#11 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(440): ReflectionClass->newInstanceArgs(Array)
+#12 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#13 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#14 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#15 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#16 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#17 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(163): yii\base\BaseObject->__construct(Array)
+#18 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#19 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(432): ReflectionClass->newInstanceArgs(Array)
+#20 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#21 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#22 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(444): yii\BaseYii::createObject(Array, Array)
+#23 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#24 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\Application.php(78): yii\base\Application->bootstrap()
+#25 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#26 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#27 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#28 Z:\xampp\htdocs\blog\web\index.php(12): yii\base\Application->__construct(Array)
+#29 {main}
+2026-02-13 10:25:35 [::1][-][b8b82plt8292deeme662hlmtdu][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'b8b82plt8292deeme662hlmtdu'
+    '_csrf' => '6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KN57Frfa9G3ndSQrdnMFGxh27rFM86zj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+    '__authKey' => 'hICamNGgKZ066e6wmmrr0W9SKXjNnjWG'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'Z:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'Z:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"142\", \"YaBrowser\";v=\"25.12\", \"Not_A Brand\";v=\"99\", \"Yowser\";v=\"2.5\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/blog/web/about/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=b8b82plt8292deeme662hlmtdu; _csrf=6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KN57Frfa9G3ndSQrdnMFGxh27rFM86zj%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk-17\\bin;C:\\Gradle\\gradle-9.0.0\\bin\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;Z:\\Git\\cmd;Z:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\Android\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Android\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'Z:/xampp/htdocs/blog/web/index.php'
+    'REMOTE_PORT' => '60647'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770974735.7712
+    'REQUEST_TIME' => 1770974735
+]
+2026-02-13 10:36:57 [::1][-][b8b82plt8292deeme662hlmtdu][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php:443
+Stack trace:
+#0 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(464): yii\db\ActiveRecord::getTableSchema()
+#1 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(180): yii\db\ActiveRecord::primaryKey()
+#2 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(109): yii\db\ActiveRecord::findByCondition(5)
+#3 Z:\xampp\htdocs\blog\models\UserIdentity.php(15): yii\db\BaseActiveRecord::findOne(5)
+#4 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(731): app\models\UserIdentity::findIdentity(5)
+#5 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(206): yii\web\User->renewAuthStatus()
+#6 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(384): yii\web\User->getIdentity()
+#7 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Component.php(144): yii\web\User->getIsGuest()
+#8 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#9 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#10 [internal function]: yii\base\BaseObject->__construct(Array)
+#11 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(440): ReflectionClass->newInstanceArgs(Array)
+#12 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#13 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#14 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#15 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#16 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#17 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(163): yii\base\BaseObject->__construct(Array)
+#18 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#19 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(432): ReflectionClass->newInstanceArgs(Array)
+#20 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#21 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#22 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(444): yii\BaseYii::createObject(Array, Array)
+#23 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#24 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\Application.php(78): yii\base\Application->bootstrap()
+#25 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#26 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#27 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#28 Z:\xampp\htdocs\blog\web\index.php(12): yii\base\Application->__construct(Array)
+#29 {main}
+2026-02-13 10:36:57 [::1][-][b8b82plt8292deeme662hlmtdu][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'b8b82plt8292deeme662hlmtdu'
+    '_csrf' => '6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KN57Frfa9G3ndSQrdnMFGxh27rFM86zj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+    '__authKey' => 'hICamNGgKZ066e6wmmrr0W9SKXjNnjWG'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'Z:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'Z:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"142\", \"YaBrowser\";v=\"25.12\", \"Not_A Brand\";v=\"99\", \"Yowser\";v=\"2.5\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/blog/web/about/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=b8b82plt8292deeme662hlmtdu; _csrf=6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KN57Frfa9G3ndSQrdnMFGxh27rFM86zj%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk-17\\bin;C:\\Gradle\\gradle-9.0.0\\bin\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;Z:\\Git\\cmd;Z:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\Android\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Android\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'Z:/xampp/htdocs/blog/web/index.php'
+    'REMOTE_PORT' => '60845'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770975417.7342
+    'REQUEST_TIME' => 1770975417
+]
+2026-02-13 10:53:24 [::1][-][b8b82plt8292deeme662hlmtdu][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php:443
+Stack trace:
+#0 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(464): yii\db\ActiveRecord::getTableSchema()
+#1 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(180): yii\db\ActiveRecord::primaryKey()
+#2 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(109): yii\db\ActiveRecord::findByCondition(5)
+#3 Z:\xampp\htdocs\blog\models\UserIdentity.php(15): yii\db\BaseActiveRecord::findOne(5)
+#4 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(731): app\models\UserIdentity::findIdentity(5)
+#5 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(206): yii\web\User->renewAuthStatus()
+#6 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(384): yii\web\User->getIdentity()
+#7 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Component.php(144): yii\web\User->getIsGuest()
+#8 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#9 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#10 [internal function]: yii\base\BaseObject->__construct(Array)
+#11 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(440): ReflectionClass->newInstanceArgs(Array)
+#12 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#13 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#14 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#15 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#16 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#17 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(163): yii\base\BaseObject->__construct(Array)
+#18 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#19 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(432): ReflectionClass->newInstanceArgs(Array)
+#20 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#21 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#22 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(444): yii\BaseYii::createObject(Array, Array)
+#23 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#24 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\Application.php(78): yii\base\Application->bootstrap()
+#25 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#26 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#27 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#28 Z:\xampp\htdocs\blog\web\index.php(12): yii\base\Application->__construct(Array)
+#29 {main}
+2026-02-13 10:53:24 [::1][-][b8b82plt8292deeme662hlmtdu][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'b8b82plt8292deeme662hlmtdu'
+    '_csrf' => '6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KN57Frfa9G3ndSQrdnMFGxh27rFM86zj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+    '__authKey' => 'hICamNGgKZ066e6wmmrr0W9SKXjNnjWG'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'Z:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'Z:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"142\", \"YaBrowser\";v=\"25.12\", \"Not_A Brand\";v=\"99\", \"Yowser\";v=\"2.5\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/blog/web/about/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=b8b82plt8292deeme662hlmtdu; _csrf=6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KN57Frfa9G3ndSQrdnMFGxh27rFM86zj%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk-17\\bin;C:\\Gradle\\gradle-9.0.0\\bin\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;Z:\\Git\\cmd;Z:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\Android\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Android\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'Z:/xampp/htdocs/blog/web/index.php'
+    'REMOTE_PORT' => '61181'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770976404.691
+    'REQUEST_TIME' => 1770976404
+]
+2026-02-13 10:54:32 [::1][-][b8b82plt8292deeme662hlmtdu][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php:443
+Stack trace:
+#0 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(464): yii\db\ActiveRecord::getTableSchema()
+#1 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(180): yii\db\ActiveRecord::primaryKey()
+#2 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(109): yii\db\ActiveRecord::findByCondition(5)
+#3 Z:\xampp\htdocs\blog\models\UserIdentity.php(15): yii\db\BaseActiveRecord::findOne(5)
+#4 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(731): app\models\UserIdentity::findIdentity(5)
+#5 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(206): yii\web\User->renewAuthStatus()
+#6 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(384): yii\web\User->getIdentity()
+#7 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Component.php(144): yii\web\User->getIsGuest()
+#8 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#9 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#10 [internal function]: yii\base\BaseObject->__construct(Array)
+#11 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(440): ReflectionClass->newInstanceArgs(Array)
+#12 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#13 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#14 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#15 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#16 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#17 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(163): yii\base\BaseObject->__construct(Array)
+#18 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#19 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(432): ReflectionClass->newInstanceArgs(Array)
+#20 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#21 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#22 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(444): yii\BaseYii::createObject(Array, Array)
+#23 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#24 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\Application.php(78): yii\base\Application->bootstrap()
+#25 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#26 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#27 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#28 Z:\xampp\htdocs\blog\web\index.php(12): yii\base\Application->__construct(Array)
+#29 {main}
+2026-02-13 10:54:32 [::1][-][b8b82plt8292deeme662hlmtdu][info][application] $_GET = [
+    'r' => 'site/test-db'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'b8b82plt8292deeme662hlmtdu'
+    '_csrf' => '6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KN57Frfa9G3ndSQrdnMFGxh27rFM86zj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+    '__authKey' => 'hICamNGgKZ066e6wmmrr0W9SKXjNnjWG'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'Z:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'Z:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"142\", \"YaBrowser\";v=\"25.12\", \"Not_A Brand\";v=\"99\", \"Yowser\";v=\"2.5\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=b8b82plt8292deeme662hlmtdu; _csrf=6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KN57Frfa9G3ndSQrdnMFGxh27rFM86zj%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk-17\\bin;C:\\Gradle\\gradle-9.0.0\\bin\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;Z:\\Git\\cmd;Z:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\Android\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Android\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'Z:/xampp/htdocs/blog/web/index.php'
+    'REMOTE_PORT' => '61205'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/test-db'
+    'REQUEST_URI' => '/blog/web/index.php?r=site/test-db'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770976472.7467
+    'REQUEST_TIME' => 1770976472
+]
+2026-02-13 10:55:44 [::1][-][b8b82plt8292deeme662hlmtdu][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php:443
+Stack trace:
+#0 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(464): yii\db\ActiveRecord::getTableSchema()
+#1 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(180): yii\db\ActiveRecord::primaryKey()
+#2 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(109): yii\db\ActiveRecord::findByCondition(5)
+#3 Z:\xampp\htdocs\blog\models\UserIdentity.php(15): yii\db\BaseActiveRecord::findOne(5)
+#4 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(731): app\models\UserIdentity::findIdentity(5)
+#5 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(206): yii\web\User->renewAuthStatus()
+#6 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(384): yii\web\User->getIdentity()
+#7 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Component.php(144): yii\web\User->getIsGuest()
+#8 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#9 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#10 [internal function]: yii\base\BaseObject->__construct(Array)
+#11 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(440): ReflectionClass->newInstanceArgs(Array)
+#12 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#13 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#14 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#15 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#16 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#17 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(163): yii\base\BaseObject->__construct(Array)
+#18 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#19 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(432): ReflectionClass->newInstanceArgs(Array)
+#20 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#21 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#22 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(444): yii\BaseYii::createObject(Array, Array)
+#23 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#24 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\Application.php(78): yii\base\Application->bootstrap()
+#25 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#26 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#27 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#28 Z:\xampp\htdocs\blog\web\index.php(12): yii\base\Application->__construct(Array)
+#29 {main}
+2026-02-13 10:55:44 [::1][-][b8b82plt8292deeme662hlmtdu][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'b8b82plt8292deeme662hlmtdu'
+    '_csrf' => '6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KN57Frfa9G3ndSQrdnMFGxh27rFM86zj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+    '__authKey' => 'hICamNGgKZ066e6wmmrr0W9SKXjNnjWG'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'Z:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'Z:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"142\", \"YaBrowser\";v=\"25.12\", \"Not_A Brand\";v=\"99\", \"Yowser\";v=\"2.5\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/blog/web/about/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=b8b82plt8292deeme662hlmtdu; _csrf=6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KN57Frfa9G3ndSQrdnMFGxh27rFM86zj%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk-17\\bin;C:\\Gradle\\gradle-9.0.0\\bin\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;Z:\\Git\\cmd;Z:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\Android\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Android\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'Z:/xampp/htdocs/blog/web/index.php'
+    'REMOTE_PORT' => '61236'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770976544.7124
+    'REQUEST_TIME' => 1770976544
+]
+2026-02-13 10:57:46 [::1][-][b8b82plt8292deeme662hlmtdu][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php:443
+Stack trace:
+#0 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(464): yii\db\ActiveRecord::getTableSchema()
+#1 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\ActiveRecord.php(180): yii\db\ActiveRecord::primaryKey()
+#2 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(109): yii\db\ActiveRecord::findByCondition(5)
+#3 Z:\xampp\htdocs\blog\models\UserIdentity.php(15): yii\db\BaseActiveRecord::findOne(5)
+#4 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(731): app\models\UserIdentity::findIdentity(5)
+#5 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(206): yii\web\User->renewAuthStatus()
+#6 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\User.php(384): yii\web\User->getIdentity()
+#7 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Component.php(144): yii\web\User->getIsGuest()
+#8 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#9 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#10 [internal function]: yii\base\BaseObject->__construct(Array)
+#11 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(440): ReflectionClass->newInstanceArgs(Array)
+#12 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#13 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#14 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#15 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#16 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#17 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(163): yii\base\BaseObject->__construct(Array)
+#18 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#19 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(432): ReflectionClass->newInstanceArgs(Array)
+#20 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\di\Container.php(180): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#21 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\BaseYii.php(380): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#22 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Module.php(444): yii\BaseYii::createObject(Array, Array)
+#23 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#24 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\web\Application.php(78): yii\base\Application->bootstrap()
+#25 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#26 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#27 Z:\xampp\htdocs\blog\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#28 Z:\xampp\htdocs\blog\web\index.php(12): yii\base\Application->__construct(Array)
+#29 {main}
+2026-02-13 10:57:46 [::1][-][b8b82plt8292deeme662hlmtdu][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'b8b82plt8292deeme662hlmtdu'
+    '_csrf' => '6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KN57Frfa9G3ndSQrdnMFGxh27rFM86zj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+    '__authKey' => 'hICamNGgKZ066e6wmmrr0W9SKXjNnjWG'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'Z:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'Z:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"142\", \"YaBrowser\";v=\"25.12\", \"Not_A Brand\";v=\"99\", \"Yowser\";v=\"2.5\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/blog/web/about/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=b8b82plt8292deeme662hlmtdu; _csrf=6583fd577e83a7f4db28f69c5f81a32c1fae0fad732c95c7c146b84a685a74b3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KN57Frfa9G3ndSQrdnMFGxh27rFM86zj%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk-17\\bin;C:\\Gradle\\gradle-9.0.0\\bin\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;Z:\\Git\\cmd;Z:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\Android\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Android\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'Z:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'Z:/xampp/htdocs/blog/web/index.php'
+    'REMOTE_PORT' => '61270'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770976666.1309
+    'REQUEST_TIME' => 1770976666
+]

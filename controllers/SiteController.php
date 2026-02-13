@@ -46,6 +46,7 @@ class SiteController extends Controller
     /**
      * {@inheritdoc}
      */
+
     public function actions()
     {
         return [

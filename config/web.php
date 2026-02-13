@@ -17,6 +17,9 @@ $config = [
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
+            'cachePath' => '@app/runtime/cache',
+            'directoryLevel' => 2,
+            'keyPrefix' => 'app_',
         ],
         'user' => [
             'identityClass' => 'app\models\UserIdentity',
@@ -37,7 +40,7 @@ $config = [
                 [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
-                    'logFile' => '@app/logs/app.log',
+                    'logFile' => '@app/runtime/logs/app.log',
                 ],
             ],
         ],
