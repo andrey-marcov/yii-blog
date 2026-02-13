@@ -45,11 +45,29 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => false,
+            'suffix' => '/',
             'rules' => [
+                '' => 'site/index',
+                'about' => 'site/about',
+                'contact' => 'site/contact',
+
+                'post' => 'post/index',
+                'post/create' => 'post/create',
+                'post/<id:\d+>' => 'post/view',
+                'post/<id:\d+>/update' => 'post/update',
+                'post/<id:\d+>/delete' => 'post/delete',
+
+                'comment' => 'comment/index',
+                'comment/<id:\d+>' => 'comment/view',
+
+                'login' => 'site/login',
+                'signup' => 'site/signup',
+                'logout' => 'site/logout',
+
                 'create-post' => 'post/create',
                 'manage-posts' => 'post/index',
                 'approve-comments' => 'comment/approve',
-                'logout' => 'site/logout',
             ],
         ],
 
