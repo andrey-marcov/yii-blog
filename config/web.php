@@ -37,6 +37,7 @@ $config = [
                 [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
+                    'logFile' => '@app/logs/app.log',
                 ],
             ],
         ],
