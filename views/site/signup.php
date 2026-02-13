@@ -19,7 +19,7 @@ $this->title = 'Регистрация';
     <?= $form->field($model, 'password')->passwordInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Зарегистрироваться', ['class' => 'btn btn-primary']) ?>
+        <?= Html::submitButton('Create account', ['class' => 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

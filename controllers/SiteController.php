@@ -66,7 +66,14 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $posts = \app\models\Post::find()
+            ->orderBy(['create_time' => SORT_DESC])
+            ->limit(5)
+            ->all();
+
+        return $this->render('index', [
+            'posts' => $posts
+        ]);
     }
 
     /**
@@ -134,11 +141,17 @@ class SiteController extends Controller
     public function actionSignup()
     {
         $model = new \app\models\User();
-
         if ($model->load(Yii::$app->request->post())) {
             if ($model->save()) {
-                Yii::$app->user->login($model);
-                return $this->goHome();
+                // Создаём объект идентичности
+                $identity = \app\models\UserIdentity::findByUsername($model->username);
+                if ($identity) {
+                    Yii::$app->user->login($identity);
+                    return $this->goHome();
+                }
+            } else {
+                \Yii::error('Ошибки валидации: ' . print_r($model->errors, true));
+                Yii::$app->session->setFlash('error', 'Ошибка регистрации. Проверьте данные.');
             }
         }
 
