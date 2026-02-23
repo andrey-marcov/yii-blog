@@ -31,9 +31,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'status',
             'create_time',
             'author',
-            //'email:email',
-            //'url:url',
-            //'post_id',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Comment $model, $key, $index, $column) {

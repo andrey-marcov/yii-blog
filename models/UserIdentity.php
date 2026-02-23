@@ -64,6 +64,6 @@ class UserIdentity extends BaseObject implements IdentityInterface
 
     public function validatePassword($password)
     {
-        return \Yii::$app->security->validatePassword($password, $this->_user->password);
+        return \Yii::$app->security->validatePassword($password, $this->_user->password_hash);
     }
 }

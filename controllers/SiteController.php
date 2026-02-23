@@ -144,7 +144,6 @@ class SiteController extends Controller
         $model = new \app\models\User();
         if ($model->load(Yii::$app->request->post())) {
             if ($model->save()) {
-                // Создаём объект идентичности
                 $identity = \app\models\UserIdentity::findByUsername($model->username);
                 if ($identity) {
                     Yii::$app->user->login($identity);

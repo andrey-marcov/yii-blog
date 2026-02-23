@@ -3,11 +3,15 @@
 namespace app\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
+use yii\db\Expression;
 use yii\web\IdentityInterface;
 
 class User extends ActiveRecord implements IdentityInterface
 {
+
+    public $password;
     public static function tableName()
     {
         return '{{%user}}';
@@ -26,6 +30,18 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::class,
+                'createdAtAttribute' => 'created_at',
+                'updatedAtAttribute' => 'updated_at',
+                'value' => new Expression('NOW()'),
+            ],
+        ];
+    }
+
     public function attributeLabels()
     {
         return [
@@ -37,11 +53,6 @@ class User extends ActiveRecord implements IdentityInterface
             'created_at' => 'Дата создания',
             'updated_at' => 'Дата обновления',
         ];
-    }
-
-    public function setPassword($password)
-    {
-        $this->password = Yii::$app->security->generatePasswordHash($password);
     }
 
     public function generateAuthKey()
@@ -76,7 +87,7 @@ class User extends ActiveRecord implements IdentityInterface
 
     public function validatePassword($password)
     {
-        return Yii::$app->security->validatePassword($password, $this->password);
+        return Yii::$app->security->validatePassword($password, $this->password_hash);
     }
 
     public function beforeSave($insert)
@@ -84,10 +95,8 @@ class User extends ActiveRecord implements IdentityInterface
         if (parent::beforeSave($insert)) {
             if ($this->isNewRecord) {
                 $this->generateAuthKey();
-                $this->setPassword($this->password);
-                $this->created_at = date('Y-m-d H:i:s');
+                $this->password_hash = Yii::$app->security->generatePasswordHash($this->password);
             }
-            $this->updated_at = date('Y-m-d H:i:s');
             return true;
         }
         return false;

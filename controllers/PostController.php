@@ -28,12 +28,12 @@ class PostController extends Controller
                         [
                             'allow' => true,
                             'actions' => ['index', 'view'],
-                            'roles' => ['?', '@'], // Доступно всем (гостям и авторизованным)
+                            'roles' => ['?', '@'],
                         ],
                         [
                             'allow' => true,
                             'actions' => ['create', 'update', 'delete'],
-                            'roles' => ['@'], // Только авторизованным
+                            'roles' => ['@'],
                         ],
                     ],
                 ],
@@ -56,16 +56,6 @@ class PostController extends Controller
     {
         $dataProvider = new ActiveDataProvider([
             'query' => Post::find(),
-            /*
-            'pagination' => [
-                'pageSize' => 50
-            ],
-            'sort' => [
-                'defaultOrder' => [
-                    'id' => SORT_DESC,
-                ]
-            ],
-            */
         ]);
 
         return $this->render('index', [
